@@ -1,0 +1,70 @@
+<nav>
+	<a href = "/">
+		<img src = "/logo.png">
+		<h1 id = "large">Acoustic Typewriter</h1>
+		<h1 id = "small">AT</h1>
+	</a>
+
+	<div>
+		<a href = "/about">About</a>
+		<a href = "/posts">Posts</a>
+		<a href = "/posts">Contact</a>
+
+	</div>
+</nav>
+
+<style>
+	@media screen and (max-width: 650px) {
+		#large {
+			display: none;
+		}
+	}
+	@media screen and (min-width: 650px) {
+		#small {
+			display: none;
+		}
+	}
+	img {
+
+		width: clamp(50px, 20vh, 75px);
+	}
+	nav {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		/*background: #1c1c1c;*/
+	}
+
+	nav>div{
+		display: flex;
+		align-items: center;
+		gap: clamp(5px, 3vw, 20px);
+		/*margin: clamp(5px, 1vw, 15px);*/
+	}
+
+	nav>a {
+		display: flex;
+		align-items: center;
+		font-family: "Shadows into Light";
+		font-size: clamp(25px, 10vh, 30px);
+		color: white;
+		text-decoration: none;
+		gap:2px;
+		
+	}
+	a:not(nav>a) {
+		color: white;
+		font-family: "Chakra Petch";
+		font-size: 110%;
+		text-decoration: none;
+		transform: scale(100%);
+		transition: transform 0.2s ease-in-out;
+	}
+
+	a:not(nav>a):hover {
+		transform: scale(110%);
+	}
+
+
+	
+</style>
